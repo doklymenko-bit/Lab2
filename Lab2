@@ -1,0 +1,86 @@
+#include <iostream>
+#include <cmath>
+ 
+using namespace std;
+ 
+int main()
+{
+   // Завдання 1. Integer25
+   // Визначення номера дня тижня
+ 
+   cout << "Integer25." << endl;
+ 
+   int K, day;
+ 
+   // Введення номера дня року
+   cout << "K = ";
+   cin >> K;
+   cout << K << endl;
+ 
+   // Обчислення номера дня тижня
+   // 1 січня було четвергом
+   day = (K + 3) % 7;
+ 
+   // Виведення результату
+   cout << "Day = " << day << endl;
+ 
+ 
+   // Завдання 2. Boolean23
+   // Перевірка числа на паліндром
+ 
+   cout << "\nBoolean23." << endl;
+ 
+   int n;
+ 
+   // Введення чотиризначного числа
+   cout << "n = ";
+   cin >> n;
+   cout << n << endl;
+ 
+   // Виділення цифр числа
+   int a = n / 1000;
+   int b = (n / 100) % 10;
+   int c = (n / 10) % 10;
+   int d = n % 10;
+ 
+   // Перевірка рівності відповідних цифр
+   bool palindrome = (a == d) && (b == c);
+ 
+   // Виведення логічного результату
+   cout << "Palindrome: " << boolalpha
+        << palindrome << endl;
+ 
+ 
+ 
+ 
+ 
+   // Завдання 3. Math7
+   // Обчислення математичного виразу
+ 
+   cout << "\nMath7." << endl;
+ 
+   // Оголошення константи та змінних
+   const double pi = 3.141592653589793;
+   double x, numerator, denominator, y;
+ 
+   // Введення значення аргументу
+   cout << "x = ";
+   cin >> x;
+   cout << x << endl;
+ 
+   // Обчислення чисельника
+   numerator = (log(fabs(x)) / log(4.0))
+       * sqrt(fabs(x * sin(x) * cos(x)));
+ 
+   // Обчислення знаменника
+   // Переведення градусів у радіани
+   denominator = cos(x + 32.0 * pi / 180.0)
+       + 0.5 * sqrt(x + 5.0);
+ 
+   // Обчислення значення функції
+   y = 0.5 * numerator / denominator;
+ 
+   // Виведення результату
+   cout << "y = " << y << endl;
+ 
+   return 0;
